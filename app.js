@@ -16,9 +16,9 @@ const menu=[
  {ar:'تندر فينغرز',en:'Tender Fingers',cat:'sides',price:1.5,desc:['ثلاث قطع دجاج مقرمش مع صوص الجبنة المميز.','Three crispy chicken tenders with signature cheese sauce.'],img:'sides',crop:'330 520 250 230'},
  {ar:'بونلس بون بون',en:'Boneless Bon Bon',cat:'sides',price:2,desc:['10 قطع بونلس مع صوصات مزمز.','Ten boneless chicken bites with MZMZ sauces.'],img:'sides',crop:'75 770 270 177'},
  {ar:'العو',en:'Al Aww',cat:'sides',price:5,desc:['شيبس وبونلس مقرمش مع صوصات مزمز المميزة.','Chips and crispy boneless chicken with MZMZ signature sauces.'],img:'extras',crop:'305 505 280 180'},
- {ar:'فرايز',en:'Fries',cat:'sides',price:1,desc:['بطاطا أصابع رفيعة وكريسبي مع صوص جبنة وكاتشب.','Thin crispy fries with cheese sauce and ketchup.'],img:'sides',crop:'345 990 175 83'},
- {ar:'عصير مش طبيعي',en:'Mesh Tabe3i Juice',cat:'drinks',price:.5,desc:['فراولة، برتقال أو توت.','Strawberry, orange or berry.'],img:'extras',crop:'76 676 265 194'},
- {ar:'مشروب غازي جوي',en:'Joy Soft Drink',cat:'drinks',price:.35,desc:['نكهات جوي المختلفة.','Assorted Joy flavours.'],img:'sides',crop:'345 943 235 76'}
+ {ar:'فرايز',en:'Fries',cat:'sides',price:1,desc:['بطاطا أصابع رفيعة وكريسبي مع صوص جبنة وكاتشب.','Thin crispy fries with cheese sauce and ketchup.'],img:'fries-clean',crop:null},
+ {ar:'عصير مش طبيعي',en:'Mesh Tabe3i Juice',cat:'drinks',price:.5,desc:['فراولة، برتقال أو توت.','Strawberry, orange or berry.'],img:'juice-clean',crop:null},
+ {ar:'مشروب غازي جوي',en:'Joy Soft Drink',cat:'drinks',price:.35,desc:['نكهات جوي المختلفة.','Assorted Joy flavours.'],img:'joy-clean',crop:null}
 ];
 const combos=[
  {ar:'منيو المزمزة',en:'Al Mazmaza Combo',img:'combo-mzmz',crop:'28 382 580 455',desc:['الشطيرة الخطيرة + مزمز شيبس مع جبنة وصوصات + 3 تندر فينغرز مع جبنة + عصير أو مياه.','Al Khatira sandwich, MZMZ chips with cheese and sauces, three tenders with cheese, and juice or water.']},
@@ -36,7 +36,8 @@ const flavours=[
  ['حار','Hot','نكهة الفلفل الحار.','A hot pepper kick.']
 ];
 let flavour=0;
-const picture=(name,crop,label)=>`<svg viewBox="${crop}" preserveAspectRatio="xMidYMid slice" role="img" aria-label="${label}" xmlns="http://www.w3.org/2000/svg"><image href="assets/${name}.jpg" width="640" height="1138"/></svg>`;
+const photoUrl=name=>`assets/${name}.${name.endsWith('-clean')?'webp':'jpg'}`;
+const picture=(name,crop,label)=>!crop?`<img class="product-photo" src="${photoUrl(name)}" alt="${label}" width="1536" height="1024" loading="lazy">`:`<svg viewBox="${crop}" preserveAspectRatio="xMidYMid slice" role="img" aria-label="${label}" xmlns="http://www.w3.org/2000/svg"><image href="${photoUrl(name)}" width="640" height="1138"/></svg>`;
 const money=n=>Number(n).toFixed(n===.35?2:Number.isInteger(n)?0:1)+' '+t('د.أ','JD');
 function renderMenu(){
  const q=$('#search').value.trim().toLowerCase();
@@ -67,7 +68,7 @@ document.querySelectorAll('[data-filter]').forEach(b=>b.addEventListener('click'
 $('#search').addEventListener('input',renderMenu);
 $('#flavours').addEventListener('click',e=>{const b=e.target.closest('[data-flavour]');if(b){flavour=Number(b.dataset.flavour);renderFlavours()}});
 const dialog=$('#photo-dialog');
-function openPhoto(name,caption){$('#dialog-image').src=`assets/${name}.jpg`;$('#dialog-image').alt=caption;$('#dialog-caption').textContent=caption;dialog.showModal();document.body.style.overflow='hidden'}
+function openPhoto(name,caption){$('#dialog-image').src=photoUrl(name);$('#dialog-image').alt=caption;$('#dialog-caption').textContent=caption;dialog.showModal();document.body.style.overflow='hidden'}
 document.addEventListener('click',e=>{const b=e.target.closest('[data-photo]');if(b)openPhoto(b.dataset.photo,b.dataset.caption)});
 $('#original-menu').addEventListener('click',()=>openPhoto('menu',t('المنيو الأصلي — الأسعار بالدينار الأردني','Original Arabic menu — prices in JD')));
 $('.close-dialog').addEventListener('click',()=>dialog.close());
