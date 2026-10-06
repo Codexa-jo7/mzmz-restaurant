@@ -25,6 +25,3 @@
 .food-visual svg:has(image[href$="-hd.webp"]){aspect-ratio:1}
 .combo-img .product-photo{background:radial-gradient(ellipse at center,#31999d,var(--navy));object-fit:contain}
 @media(max-width:680px){.combo-img .product-photo{height:100%;aspect-ratio:auto;min-height:240px}}
-
-#chips-menu-photos{max-width:720px;margin:28px auto 0}
-#chips-menu-photos[hidden]{display:none}

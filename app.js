@@ -11,7 +11,8 @@ const menu=[
  {ar:'الديك',en:'Al Deek',cat:'sandwich',price:3,meal:4,desc:['صدر دجاج، صوص النار المميز، شيدر وهالبينو.','Chicken breast, signature hot sauce, cheddar and jalapeños.'],img:'sides-hd',crop:'4 4 504 504'},
  {ar:'الدينامو',en:'Dynamo',cat:'sandwich',price:3,meal:4,desc:['دجاج مقرمش، صوص الدينامو وحلقات بصل.','Crispy chicken, Dynamo sauce and onion rings.'],img:'sides-hd',crop:'516 4 504 504'},
  {ar:'مزموزيل',en:'Mazmozeel',cat:'sandwich',price:2.5,meal:3.5,desc:['دجاج، موزاريلا ستيكس، شيدر، سويس وهالبينو.','Chicken, mozzarella sticks, cheddar, Swiss cheese and jalapeños.'],img:'sandwiches-hd',crop:'580 600 400 345'},
- {ar:'مزمز شيبس',en:'MZMZ Chips',cat:'chips',price:2,desc:['شيبس طبيعي مقرمش، جبنة وصوصات مزمز الخاصة.','Crispy natural potato chips, cheese and MZMZ sauces.'],img:'extras-hd',crop:'516 4 504 504'},
+ {ar:'مزمز شيبس',en:'MZMZ Chips',cat:'chips',price:2.5,desc:['شيبس طبيعي مقرمش، جبنة وصوصات مزمز الخاصة.','Crispy natural potato chips, cheese and MZMZ sauces.'],img:'extras-hd',crop:'516 4 504 504'},
+ {ar:'تاكيز أزرق',en:'Blue Takis',cat:'chips',price:2.5,desc:['نكهة حارة وحامضة.','A spicy, tangy flavour.'],img:'blue-takis-hd',crop:null},
  {ar:'سطل شيبس',en:'Chips Bucket',cat:'chips',price:2.5,desc:['شيبس طبيعي مقرمش بنكهات متعددة، جبنة وصوصات.','A bucket of natural potato chips with flavour options, cheese and sauces.'],img:'extras-hd',crop:'4 516 504 504'},
  {ar:'تندر فينغرز',en:'Tender Fingers',cat:'sides',price:1.5,desc:['ثلاث قطع دجاج مقرمش مع صوص الجبنة المميز.','Three crispy chicken tenders with signature cheese sauce.'],img:'sides-hd',crop:'4 516 504 504'},
  {ar:'بونلس بون بون',en:'Boneless Bon Bon',cat:'sides',price:2,desc:['10 قطع بونلس مع صوصات مزمز.','Ten boneless chicken bites with MZMZ sauces.'],img:'sides-hd',crop:'516 516 504 504'},
@@ -44,7 +45,6 @@ function renderMenu(){
  const filtered=menu.filter(m=>(category==='all'||m.cat===category)&&(!q||(m.ar+' '+m.en+' '+m.desc.join(' ')).toLowerCase().includes(q)));
  $('#menu-grid').innerHTML=filtered.map(m=>`<article class="menu-card"><button class="food-visual" data-photo="${m.img}" data-crop="${m.crop||''}" data-caption="${t(m.ar,m.en)}" aria-label="${t('تكبير صورة ','Enlarge image of ')+t(m.ar,m.en)}">${picture(m.img,m.crop,t(m.ar,m.en))}<span class="zoom-mark" aria-hidden="true">+</span></button><div class="menu-copy"><h3>${t(m.ar,m.en)}</h3><p>${t(...m.desc)}</p><div class="prices"><span>${m.meal?t('ساندويش','Sandwich'):t('السعر','Price')}<b>${money(m.price)}</b></span>${m.meal?`<span>${t('وجبة','Meal')}<b>${money(m.meal)}</b></span>`:''}</div></div></article>`).join('');
  $('#empty').hidden=filtered.length!==0;
- $('#chips-menu-photos').hidden=category!=='chips'||q!=='';
 }
 function renderCombos(){
  $('#combo-grid').innerHTML=combos.map(m=>`<article class="combo-card"><button class="combo-img food-visual" data-photo="${m.img}" data-crop="${m.crop||''}" data-caption="${t(m.ar,m.en)}" aria-label="${t('تكبير صورة ','Enlarge image of ')+t(m.ar,m.en)}">${picture(m.img,m.crop,t(m.ar,m.en))}<span class="zoom-mark" aria-hidden="true">+</span></button><div class="copy"><h3>${t(m.ar,m.en)}</h3><p>${t(...m.desc)}</p><div class="price-row"><span>${t('المزمزة كاملة','The whole combo')}</span><b>${money(5)}</b></div></div></article>`).join('');
