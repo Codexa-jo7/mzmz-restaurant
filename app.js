@@ -12,7 +12,7 @@ const menu=[
  {ar:'الدينامو',en:'Dynamo',cat:'sandwich',price:3,meal:4,desc:['دجاج مقرمش، صوص الدينامو وحلقات بصل.','Crispy chicken, Dynamo sauce and onion rings.'],img:'sides-hd',crop:'516 4 504 504'},
  {ar:'مزموزيل',en:'Mazmozeel',cat:'sandwich',price:2.5,meal:3.5,desc:['دجاج، موزاريلا ستيكس، شيدر، سويس وهالبينو.','Chicken, mozzarella sticks, cheddar, Swiss cheese and jalapeños.'],img:'sandwiches-hd',crop:'580 600 400 345'},
  {ar:'مزمز شيبس',en:'MZMZ Chips',cat:'chips',price:2.5,desc:['شيبس طبيعي مقرمش، جبنة وصوصات مزمز الخاصة.','Crispy natural potato chips, cheese and MZMZ sauces.'],img:'extras-hd',crop:'516 4 504 504'},
- {ar:'تاكيز أزرق',en:'Blue Takis',cat:'chips',price:2.5,desc:['نكهة حارة وحامضة.','A spicy, tangy flavour.'],img:'blue-takis-hd',crop:null},
+ {ar:'تاكيز أزرق',en:'Blue Takis',cat:'chips',price:2.5,desc:['نكهة حارة وحامضة.','A spicy, tangy flavour.'],img:'flavors-b',crop:'122 788 260 290'},
  {ar:'سطل شيبس',en:'Chips Bucket',cat:'chips',price:2.5,desc:['شيبس طبيعي مقرمش بنكهات متعددة، جبنة وصوصات.','A bucket of natural potato chips with flavour options, cheese and sauces.'],img:'extras-hd',crop:'4 516 504 504'},
  {ar:'تندر فينغرز',en:'Tender Fingers',cat:'sides',price:1.5,desc:['ثلاث قطع دجاج مقرمش مع صوص الجبنة المميز.','Three crispy chicken tenders with signature cheese sauce.'],img:'sides-hd',crop:'4 516 504 504'},
  {ar:'بونلس بون بون',en:'Boneless Bon Bon',cat:'sides',price:2,desc:['10 قطع بونلس مع صوصات مزمز.','Ten boneless chicken bites with MZMZ sauces.'],img:'sides-hd',crop:'516 516 504 504'},
