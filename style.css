@@ -4,3 +4,18 @@
 
 /* Standalone product photography: show the entire drink or plate. */
 .food-visual .product-photo{display:block;width:100%;height:auto;aspect-ratio:1.55;object-fit:contain;background:#31999d;transition:transform .35s}.food-visual:hover .product-photo{transform:scale(1.025)}.road-bus{object-fit:contain;height:auto;bottom:3px}@media(max-width:680px){.food-visual .product-photo{aspect-ratio:1.25}.road-bus{height:auto}}
+
+/* Keep enlarged products inside their original crop; menu sheets remain complete. */
+#dialog-product{width:min(760px,80vw);clear:both}
+#dialog-product svg{display:block;width:100%;height:auto;margin:auto;overflow:hidden;background:var(--navy);border-radius:10px}
+#dialog-image[hidden],#dialog-product[hidden]{display:none}
+.flavour-menu{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin-top:22px}
+.flavour-page{padding:7px;border:1px solid #073b5040;border-radius:12px;background:var(--navy);color:var(--cream);cursor:zoom-in;overflow:hidden}
+.flavour-page img{display:block;width:100%;height:auto;border-radius:7px}
+.flavour-page span{display:block;padding:10px 4px;font-size:13px;line-height:1.5}
+.flavour-page:hover{box-shadow:0 5px 16px #073b5030}
+.flavour-page:focus-visible{outline:3px solid var(--orange);outline-offset:4px}
+
+[data-photo="joy-cans"]{background:radial-gradient(ellipse at center,#31999d 0%,var(--navy) 85%)}
+[data-photo="joy-cans"] .product-photo{background:transparent;padding:12px}
+#dialog-image[src$="joy-cans.png"]{background:radial-gradient(ellipse at center,#31999d,var(--navy));border-radius:12px}

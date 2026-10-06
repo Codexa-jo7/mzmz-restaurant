@@ -15,4 +15,4 @@ Open `index.html` directly, or serve this folder with any static server. Publish
 
 The interface and menu descriptions are translated. Original restaurant artwork retains its Arabic lettering.
 
-Images remain unchanged. SVG viewports frame portions of the originals within the page.
+Original menu artwork is retained. Product cards and enlarged views share tight SVG crops; full menu and chip-flavour sheets open uncropped. The Joy cans are isolated from the existing Joy product image and displayed on the site’s navy/teal palette.
