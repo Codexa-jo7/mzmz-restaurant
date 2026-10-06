@@ -16,6 +16,12 @@
 .flavour-page:hover{box-shadow:0 5px 16px #073b5030}
 .flavour-page:focus-visible{outline:3px solid var(--orange);outline-offset:4px}
 
-[data-photo="joy-cans"]{background:radial-gradient(ellipse at center,#31999d 0%,var(--navy) 85%)}
-[data-photo="joy-cans"] .product-photo{background:transparent;padding:12px}
-#dialog-image[src$="joy-cans.png"]{background:radial-gradient(ellipse at center,#31999d,var(--navy));border-radius:12px}
+[data-photo="joy-cola-hd"]{background:radial-gradient(ellipse at center,#31999d 0%,var(--navy) 85%)}
+[data-photo="joy-cola-hd"] .product-photo{background:transparent;padding:12px}
+#dialog-image[src$="joy-cola-hd.webp"]{background:radial-gradient(ellipse at center,#31999d,var(--navy));border-radius:12px}
+
+/* High-resolution product sheets use a complete quadrant per item. */
+.food-visual:has(image[href$="-hd.webp"]){background:radial-gradient(ellipse at center,#31999d,var(--navy))}
+.food-visual svg:has(image[href$="-hd.webp"]){aspect-ratio:1}
+.combo-img .product-photo{background:radial-gradient(ellipse at center,#31999d,var(--navy));object-fit:contain}
+@media(max-width:680px){.combo-img .product-photo{height:100%;aspect-ratio:auto;min-height:240px}}

@@ -4,26 +4,26 @@ let lang='ar',category='all';
 try{lang=localStorage.getItem('mzmz-language')==='en'?'en':'ar'}catch{}
 const t=(ar,en)=>lang==='ar'?ar:en;
 const menu=[
- {ar:'الشطيرة الخطيرة',en:'Al Khatira',cat:'sandwich',price:1,meal:2,desc:['دجاج، صوص الجبنة المميز، خيار مخلل وخس.','Chicken, signature cheese sauce, pickles and lettuce.'],img:'sandwiches',crop:'115 223 180 120'},
- {ar:'خيال',en:'Khayaal',cat:'sandwich',price:2,meal:3,desc:['صدر دجاج مقرمش، صوص الجبنة المميز وشرائح شيدر.','Crispy chicken breast, signature cheese sauce and cheddar.'],img:'sandwiches',crop:'324 393 224 147'},
- {ar:'بيغ مزمز',en:'Big MZMZ',cat:'sandwich',price:2,meal:3,desc:['دجاج مقرمش، صوص الجبنة الحار، تركي مدخن وشيدر.','Crispy chicken, spicy cheese sauce, smoked turkey and cheddar.'],img:'sandwiches',crop:'88 580 286 122'},
- {ar:'هاني',en:'Hani',cat:'sandwich',price:2,meal:3,desc:['صدر دجاج مع هوني ماسترد، روست بيف وجبنة سويس.','Chicken breast, honey mustard, roast beef and Swiss cheese.'],img:'extras',crop:'325 210 206 145'},
- {ar:'الديك',en:'Al Deek',cat:'sandwich',price:3,meal:4,desc:['صدر دجاج، صوص النار المميز، شيدر وهالبينو.','Chicken breast, signature hot sauce, cheddar and jalapeños.'],img:'sides',crop:'322 209 225 140'},
- {ar:'الدينامو',en:'Dynamo',cat:'sandwich',price:3,meal:4,desc:['دجاج مقرمش، صوص الدينامو وحلقات بصل.','Crispy chicken, Dynamo sauce and onion rings.'],img:'sides',crop:'96 382 220 166'},
- {ar:'مزموزيل',en:'Mazmozeel',cat:'sandwich',price:2.5,meal:3.5,desc:['دجاج، موزاريلا ستيكس، شيدر، سويس وهالبينو.','Chicken, mozzarella sticks, cheddar, Swiss cheese and jalapeños.'],img:'sandwiches',crop:'332 748 211 170'},
- {ar:'مزمز شيبس',en:'MZMZ Chips',cat:'chips',price:2,desc:['شيبس طبيعي مقرمش، جبنة وصوصات مزمز الخاصة.','Crispy natural potato chips, cheese and MZMZ sauces.'],img:'extras',crop:'100 370 221 110'},
- {ar:'سطل شيبس',en:'Chips Bucket',cat:'chips',price:2.5,desc:['شيبس طبيعي مقرمش بنكهات متعددة، جبنة وصوصات.','A bucket of natural potato chips with flavour options, cheese and sauces.'],img:'extras',crop:'359 819 168 178'},
- {ar:'تندر فينغرز',en:'Tender Fingers',cat:'sides',price:1.5,desc:['ثلاث قطع دجاج مقرمش مع صوص الجبنة المميز.','Three crispy chicken tenders with signature cheese sauce.'],img:'sides',crop:'350 560 190 157'},
- {ar:'بونلس بون بون',en:'Boneless Bon Bon',cat:'sides',price:2,desc:['10 قطع بونلس مع صوصات مزمز.','Ten boneless chicken bites with MZMZ sauces.'],img:'sides',crop:'111 757 171 168'},
- {ar:'العو',en:'Al Aww',cat:'sides',price:5,desc:['شيبس وبونلس مقرمش مع صوصات مزمز المميزة.','Chips and crispy boneless chicken with MZMZ signature sauces.'],img:'extras',crop:'309 538 217 118'},
+ {ar:'الشطيرة الخطيرة',en:'Al Khatira',cat:'sandwich',price:1,meal:2,desc:['دجاج، صوص الجبنة المميز، خيار مخلل وخس.','Chicken, signature cheese sauce, pickles and lettuce.'],img:'sandwiches-hd',crop:'65 155 395 285'},
+ {ar:'خيال',en:'Khayaal',cat:'sandwich',price:2,meal:3,desc:['صدر دجاج مقرمش، صوص الجبنة المميز وشرائح شيدر.','Crispy chicken breast, signature cheese sauce and cheddar.'],img:'sandwiches-hd',crop:'550 145 410 300'},
+ {ar:'بيغ مزمز',en:'Big MZMZ',cat:'sandwich',price:2,meal:3,desc:['دجاج مقرمش، صوص الجبنة الحار، تركي مدخن وشيدر.','Crispy chicken, spicy cheese sauce, smoked turkey and cheddar.'],img:'sandwiches-hd',crop:'45 635 455 280'},
+ {ar:'هاني',en:'Hani',cat:'sandwich',price:2,meal:3,desc:['صدر دجاج مع هوني ماسترد، روست بيف وجبنة سويس.','Chicken breast, honey mustard, roast beef and Swiss cheese.'],img:'extras-hd',crop:'4 4 504 504'},
+ {ar:'الديك',en:'Al Deek',cat:'sandwich',price:3,meal:4,desc:['صدر دجاج، صوص النار المميز، شيدر وهالبينو.','Chicken breast, signature hot sauce, cheddar and jalapeños.'],img:'sides-hd',crop:'4 4 504 504'},
+ {ar:'الدينامو',en:'Dynamo',cat:'sandwich',price:3,meal:4,desc:['دجاج مقرمش، صوص الدينامو وحلقات بصل.','Crispy chicken, Dynamo sauce and onion rings.'],img:'sides-hd',crop:'516 4 504 504'},
+ {ar:'مزموزيل',en:'Mazmozeel',cat:'sandwich',price:2.5,meal:3.5,desc:['دجاج، موزاريلا ستيكس، شيدر، سويس وهالبينو.','Chicken, mozzarella sticks, cheddar, Swiss cheese and jalapeños.'],img:'sandwiches-hd',crop:'580 600 400 345'},
+ {ar:'مزمز شيبس',en:'MZMZ Chips',cat:'chips',price:2,desc:['شيبس طبيعي مقرمش، جبنة وصوصات مزمز الخاصة.','Crispy natural potato chips, cheese and MZMZ sauces.'],img:'extras-hd',crop:'516 4 504 504'},
+ {ar:'سطل شيبس',en:'Chips Bucket',cat:'chips',price:2.5,desc:['شيبس طبيعي مقرمش بنكهات متعددة، جبنة وصوصات.','A bucket of natural potato chips with flavour options, cheese and sauces.'],img:'extras-hd',crop:'4 516 504 504'},
+ {ar:'تندر فينغرز',en:'Tender Fingers',cat:'sides',price:1.5,desc:['ثلاث قطع دجاج مقرمش مع صوص الجبنة المميز.','Three crispy chicken tenders with signature cheese sauce.'],img:'sides-hd',crop:'4 516 504 504'},
+ {ar:'بونلس بون بون',en:'Boneless Bon Bon',cat:'sides',price:2,desc:['10 قطع بونلس مع صوصات مزمز.','Ten boneless chicken bites with MZMZ sauces.'],img:'sides-hd',crop:'516 516 504 504'},
+ {ar:'العو',en:'Al Aww',cat:'sides',price:5,desc:['شيبس وبونلس مقرمش مع صوصات مزمز المميزة.','Chips and crispy boneless chicken with MZMZ signature sauces.'],img:'extras-hd',crop:'516 516 504 504'},
  {ar:'فرايز',en:'Fries',cat:'sides',price:1,desc:['بطاطا أصابع رفيعة وكريسبي مع صوص جبنة وكاتشب.','Thin crispy fries with cheese sauce and ketchup.'],img:'fries-clean',crop:null},
  {ar:'عصير مش طبيعي',en:'Mesh Tabe3i Juice',cat:'drinks',price:.5,desc:['فراولة، برتقال أو توت.','Strawberry, orange or berry.'],img:'juice-clean',crop:null},
- {ar:'مشروب غازي جوي',en:'Joy Soft Drink',cat:'drinks',price:.35,desc:['نكهات جوي المختلفة.','Assorted Joy flavours.'],img:'joy-cans',crop:null}
+ {ar:'مشروب غازي جوي',en:'Joy Soft Drink',cat:'drinks',price:.35,desc:['نكهات جوي المختلفة.','Assorted Joy flavours.'],img:'joy-cola-hd',crop:null}
 ];
 const combos=[
- {ar:'منيو المزمزة',en:'Al Mazmaza Combo',img:'combo-mzmz',crop:'28 382 580 455',desc:['الشطيرة الخطيرة + مزمز شيبس مع جبنة وصوصات + 3 تندر فينغرز مع جبنة + عصير أو مياه.','Al Khatira sandwich, MZMZ chips with cheese and sauces, three tenders with cheese, and juice or water.']},
- {ar:'منيو الشرس',en:'Al Shares Combo',img:'combo-fierce',crop:'35 410 575 407',desc:['ساندويش خيال + الشطيرة الخطيرة + بونلس بون بون 10 قطع.','Khayaal sandwich, Al Khatira sandwich and ten Boneless Bon Bon bites.']},
- {ar:'منيو التفليلة',en:'Al Tafleela Combo',img:'combo-full',crop:'28 421 585 414',desc:['ساندويش خيال + بيغ مزمز + عصيرين.','Khayaal sandwich, Big MZMZ and two juices.']}
+ {ar:'منيو المزمزة',en:'Al Mazmaza Combo',img:'combo-mzmz-hd',crop:null,desc:['الشطيرة الخطيرة + مزمز شيبس مع جبنة وصوصات + 3 تندر فينغرز مع جبنة + عصير أو مياه.','Al Khatira sandwich, MZMZ chips with cheese and sauces, three tenders with cheese, and juice or water.']},
+ {ar:'منيو الشرس',en:'Al Shares Combo',img:'combo-fierce-hd',crop:null,desc:['ساندويش خيال + الشطيرة الخطيرة + بونلس بون بون 10 قطع.','Khayaal sandwich, Al Khatira sandwich and ten Boneless Bon Bon bites.']},
+ {ar:'منيو التفليلة',en:'Al Tafleela Combo',img:'combo-full-hd',crop:null,desc:['ساندويش خيال + بيغ مزمز + عصيرين.','Khayaal sandwich, Big MZMZ and two juices.']}
 ];
 const flavours=[
  ['مزمز','MZMZ','خلطة مزمز الخاصة من مجموعة نكهات.','The signature MZMZ blend of flavours.'],
@@ -36,8 +36,8 @@ const flavours=[
  ['حار','Hot','نكهة الفلفل الحار.','A hot pepper kick.']
 ];
 let flavour=0;
-const photoUrl=name=>`assets/${name}.${name==='joy-cans'?'png':name.endsWith('-clean')?'webp':'jpg'}`;
-const picture=(name,crop,label)=>!crop?`<img class="product-photo" src="${photoUrl(name)}" alt="${label}" width="1536" height="1024" loading="lazy">`:`<svg viewBox="${crop}" preserveAspectRatio="xMidYMid slice" role="img" aria-label="${label}" xmlns="http://www.w3.org/2000/svg"><image href="${photoUrl(name)}" width="640" height="1138"/></svg>`;
+const photoUrl=name=>`assets/${name}.${name.endsWith('-hd')||name.endsWith('-clean')?'webp':name==='joy-cans'?'png':'jpg'}`;
+const picture=(name,crop,label)=>!crop?`<img class="product-photo" src="${photoUrl(name)}" alt="${label}" width="1536" height="1024" loading="lazy">`:`<svg viewBox="${crop}" style="aspect-ratio:${crop.split(' ')[2]}/${crop.split(' ')[3]}" preserveAspectRatio="xMidYMid slice" role="img" aria-label="${label}" xmlns="http://www.w3.org/2000/svg"><image href="${photoUrl(name)}" width="${name.endsWith('-hd')?1024:640}" height="${name.endsWith('-hd')?1024:1138}"/></svg>`;
 const money=n=>Number(n).toFixed(n===.35?2:Number.isInteger(n)?0:1)+' '+t('د.أ','JD');
 function renderMenu(){
  const q=$('#search').value.trim().toLowerCase();

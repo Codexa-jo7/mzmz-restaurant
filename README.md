@@ -16,3 +16,5 @@ Open `index.html` directly, or serve this folder with any static server. Publish
 The interface and menu descriptions are translated. Original restaurant artwork retains its Arabic lettering.
 
 Original menu artwork is retained. Product cards and enlarged views share tight SVG crops; full menu and chip-flavour sheets open uncropped. The Joy cans are isolated from the existing Joy product image and displayed on the site’s navy/teal palette.
+
+Product and combo images marked `-hd` are AI-enhanced derivatives of the original menu artwork, with reconstructed fine detail. Original menu sheets and prices are retained. The blue Joy can is illustrated as cola.
