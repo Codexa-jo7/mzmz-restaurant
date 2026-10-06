@@ -44,6 +44,7 @@ function renderMenu(){
  const filtered=menu.filter(m=>(category==='all'||m.cat===category)&&(!q||(m.ar+' '+m.en+' '+m.desc.join(' ')).toLowerCase().includes(q)));
  $('#menu-grid').innerHTML=filtered.map(m=>`<article class="menu-card"><button class="food-visual" data-photo="${m.img}" data-crop="${m.crop||''}" data-caption="${t(m.ar,m.en)}" aria-label="${t('تكبير صورة ','Enlarge image of ')+t(m.ar,m.en)}">${picture(m.img,m.crop,t(m.ar,m.en))}<span class="zoom-mark" aria-hidden="true">+</span></button><div class="menu-copy"><h3>${t(m.ar,m.en)}</h3><p>${t(...m.desc)}</p><div class="prices"><span>${m.meal?t('ساندويش','Sandwich'):t('السعر','Price')}<b>${money(m.price)}</b></span>${m.meal?`<span>${t('وجبة','Meal')}<b>${money(m.meal)}</b></span>`:''}</div></div></article>`).join('');
  $('#empty').hidden=filtered.length!==0;
+ $('#chips-menu-photos').hidden=category!=='chips'||q!=='';
 }
 function renderCombos(){
  $('#combo-grid').innerHTML=combos.map(m=>`<article class="combo-card"><button class="combo-img food-visual" data-photo="${m.img}" data-crop="${m.crop||''}" data-caption="${t(m.ar,m.en)}" aria-label="${t('تكبير صورة ','Enlarge image of ')+t(m.ar,m.en)}">${picture(m.img,m.crop,t(m.ar,m.en))}<span class="zoom-mark" aria-hidden="true">+</span></button><div class="copy"><h3>${t(m.ar,m.en)}</h3><p>${t(...m.desc)}</p><div class="price-row"><span>${t('المزمزة كاملة','The whole combo')}</span><b>${money(5)}</b></div></div></article>`).join('');
