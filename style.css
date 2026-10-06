@@ -25,3 +25,8 @@
 .food-visual svg:has(image[href$="-hd.webp"]){aspect-ratio:1}
 .combo-img .product-photo{background:radial-gradient(ellipse at center,#31999d,var(--navy));object-fit:contain}
 @media(max-width:680px){.combo-img .product-photo{height:100%;aspect-ratio:auto;min-height:240px}}
+
+[data-photo="takis-bucket-hd"] .product-photo{padding:14px;background:radial-gradient(ellipse at center,#31999d,var(--navy))}
+#dialog-image[src$="takis-bucket-hd.webp"]{padding:12px;background:var(--navy);border-radius:12px}
+
+.chips-art svg{display:block;width:100%;background:var(--navy);padding:16px}
